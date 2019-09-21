@@ -4,24 +4,28 @@ struct piece {
 	int location[2];
 	int moveCount;
 };
+
 struct square {
 	int owner;
 	char type;
 };
+
 struct move {
 	int owner;
 	char type;
 	int moveFrom[2];
 	int moveTo[2];
 };
-struct points {				//DAVID
-	int cp; //Computer points
-	int pp; //Player points
-	int spread;  //computer's current advantage
+
+struct points {
+	int cp;			// computer points
+	int pp;			// player points
+	int spread;		// computer's current advantage
 	int moveInit;
 };
 
-struct pointVal {			//array of weighted point values... DAVID
+// array of weighted point values
+struct pointVal {
 	int pieceScale;
 	int formation;
 	int advancing;
@@ -30,4 +34,4 @@ struct pointVal {			//array of weighted point values... DAVID
 typedef struct piece Piece;
 typedef struct square Square;
 typedef struct move Move;
-typedef struct points Points;		//DAVID
+typedef struct points Points;

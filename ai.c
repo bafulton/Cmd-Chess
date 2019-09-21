@@ -2,11 +2,15 @@
 #include "enums.h"
 #include "prototypes.h"
 
-void aiSwitch(Piece human[16], Piece comp[16], Square board[8][8], struct pointVal values){  //this is a relic of intintionality...
-	//it can be ultimatly used to make a decision on if the game is in early stages, late stages, if the computer is up or down piecewise, etc
-	//it was never properly utilized in this code
+void aiSwitch(Piece human[16], Piece comp[16], Square board[8][8], struct pointVal values){
+	/*
+	This is leftover intentionality code. It can be used to 
+	make a decision on if the game is in early stages, late
+	stages, if the computer is up or down piecewise, etc.
+	It is not currently being used.
+	*/
 
-	struct points currentPoints ={0};
+	struct points currentPoints = {0};
 	int movesAhead = 3;
 	currentPoints = getPoints(human, comp, board, values, currentPoints, 0);
 	//printf("Comp has %d points\n", currentPoints.cp);
