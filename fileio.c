@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "prototypes.h"
 #include "structs.h"
 #include "enums.h"
 

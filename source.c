@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "prototypes.h"
 #include "structs.h"
 #include "enums.h"
-#include "prototypes.h"
 
 
 int main(void) {

@@ -1,3 +1,5 @@
+#include <ctype.h>
+#include <string.h>
 #include "enums.h"
 
 //converts the error code to an intelligible string

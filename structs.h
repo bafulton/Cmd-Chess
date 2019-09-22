@@ -1,3 +1,6 @@
+#pragma once
+
+
 struct piece {
 	char type;
 	int owner;

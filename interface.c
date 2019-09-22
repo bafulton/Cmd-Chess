@@ -2,6 +2,8 @@
 #include <time.h>
 #include <string.h>
 #include <math.h>
+#include <ctype.h>
+#include <stdlib.h>
 #include "structs.h"
 #include "enums.h"
 #include "prototypes.h"

@@ -1,3 +1,6 @@
+#pragma once
+
+
 enum status {
 	STEPDEMO = -4,
 	DEMO = -3,

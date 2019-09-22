@@ -1,4 +1,7 @@
+#pragma once
 #include <time.h>
+#include "structs.h"
+
 
 //MAIN FUNCTIONS
 int playGame(Piece humanPieces[16], Piece computerPieces[16], Square board[8][8], int gameType);

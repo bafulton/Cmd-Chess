@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "structs.h"
 #include "enums.h"
 #include "prototypes.h"
