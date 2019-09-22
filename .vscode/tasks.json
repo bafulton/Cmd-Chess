@@ -1,0 +1,30 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "clang build active file",
+            "command": "/usr/bin/clang",
+            "args": [
+                "-g",
+                "${workspaceFolder}/source.c",
+                "${workspaceFolder}/ai.c",
+                "${workspaceFolder}/evaluation.c",
+                "${workspaceFolder}/fileio.c",
+                "${workspaceFolder}/initialization.c",
+                "${workspaceFolder}/interface.c",
+                "${workspaceFolder}/interpretation.c",
+                "${workspaceFolder}/legitimacy.c",
+                "-o",
+                "bin/chess"
+            ],
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": ["relative", "/"]
+            },
+            "group": "build"
+        }
+    ]
+}
