@@ -15,7 +15,7 @@ int getMenuChoice(void){
 	char input;
 
 	do {
-		system("cls");
+		system("clear");
 	
 		// print the main menu
 		printf("Choose one of the following:\n");
@@ -61,7 +61,7 @@ void printBoard(const Square board[8][8]){
 	int x, y, i;
 
 	// clear the screen
-	system("cls");
+	system("clear");
 
 	puts(" +--+--+--+--+--+--+--+--+");
 	for (y = 0; y < 8; y++){
@@ -350,10 +350,11 @@ void endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPi
 		printf("%c", endDialog[i]);
 
 		timeout = 12 * (1 + (rand() % 10));
-		sleep(timeout);
+		Sleep(timeout);
 	}
 	printf("----------------------------------------------------------\n");
-	system("PAUSE");
+	printf("Press any key to continue...\n");
+	getchar();
 
 	// do the ending graphics
 	if (victor == COMPUTER)
@@ -364,7 +365,8 @@ void endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPi
 	// print the ending line
 	printf("\n%s\n\n", endLine);
 	printf("----------------------------------------------------------\n");
-	system("PAUSE");
+	printf("Press any key to continue...\n");
+	getchar();
 }
 
 // move the winning king on top of the losing king
@@ -404,7 +406,7 @@ void killKing(Piece winner[16], Piece loser[16], Square board[8][8]){
 			board[kingMove.moveFrom[X]][kingMove.moveFrom[Y]].type = block.type;
 
 			printBoard(board);
-			sleep(500);
+			Sleep(500);
 		}
 	}
 	else if (winner[15].location[X] < loser[15].location[X]){
@@ -431,7 +433,7 @@ void killKing(Piece winner[16], Piece loser[16], Square board[8][8]){
 			board[kingMove.moveFrom[X]][kingMove.moveFrom[Y]].type = block.type;
 
 			printBoard(board);
-			sleep(500);
+			Sleep(500);
 		}
 	}
 	// move in the y-dimension
@@ -461,7 +463,7 @@ void killKing(Piece winner[16], Piece loser[16], Square board[8][8]){
 			board[kingMove.moveFrom[X]][kingMove.moveFrom[Y]].type = block.type;
 
 			printBoard(board);
-			sleep(500);
+			Sleep(500);
 		}
 	}
 	else if (winner[15].location[Y] < loser[15].location[Y]){
@@ -488,11 +490,12 @@ void killKing(Piece winner[16], Piece loser[16], Square board[8][8]){
 			board[kingMove.moveFrom[X]][kingMove.moveFrom[Y]].type = block.type;
 
 			printBoard(board);
-			sleep(500);
+			Sleep(500);
 		}
 	}
 }
 
+/*
 // timeout
 void sleep(clock_t wait){
 	clock_t goal;
@@ -500,3 +503,4 @@ void sleep(clock_t wait){
 	goal = wait + clock();
 	while (clock() < goal);
 }
+*/

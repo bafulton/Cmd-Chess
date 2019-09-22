@@ -38,7 +38,7 @@ int playGame(Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]
 	Move previous;
 	Move sortedMoves[16][21];	//an array of all possible moves by piece
 	int piece, move;
-	//Initialize Points for AI... DAVID
+	//Initialize Points for AI
 	struct pointVal values;
 		values.pieceScale = 10;
 		values.formation = 1;
@@ -127,10 +127,11 @@ int playGame(Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]
 		printBoard(board);
 		//if the player wanted to step through the demo, allow him to examine the human move
 		if (gameType == STEPDEMO){
-			system("PAUSE");
+			printf("Press any key to continue...\n");
+    		getchar();
 		}
 
-		//COMPUTER MOVE - DAVID
+		//COMPUTER MOVE
 		aiSwitch(humanPieces, computerPieces, board, values);
 
 		//see if the human's king is in stalemate or checkmate
@@ -142,7 +143,8 @@ int playGame(Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]
 		printBoard(board);
 		//if the player wanted to step through the demo, allow him to examine the computer move
 		if (gameType == STEPDEMO){
-			system("PAUSE");
+			printf("Press any key to continue...\n");
+    		getchar();
 		}
 	}
 
