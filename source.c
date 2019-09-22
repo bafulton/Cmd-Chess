@@ -103,7 +103,7 @@ int playGame(Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]
 			playerMove = getHumanMove(humanPieces, computerPieces, board);
 			//stop the game if the player wants to quit
 			if (playerMove.owner == 999)
-				return;
+				return QUIT;
 			//if playerMove.owner is 0 or 1, it is the player owner
 			//if playerMove.owner is < 0, it is an error listed in enum legitimacy
 			if (playerMove.owner < 0){
