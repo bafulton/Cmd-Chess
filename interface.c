@@ -321,7 +321,7 @@ int getGameMenuChoice(void){
 }
 
 // end game functions
-int endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]){
+void endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]){
 	char endDialog[150], endLine[50];
 	char word[20], endType[12];
 	int i, timeout;

@@ -3,7 +3,8 @@
 #include "enums.h"
 #include "prototypes.h"
 
-void main(void){
+
+int main(void) {
 	Piece computerPieces[16], humanPieces[16];
 	Square board[8][8];
 	int choice;

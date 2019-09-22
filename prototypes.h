@@ -17,7 +17,7 @@ void deletePiece (Piece *playerPtr, Square board[8][8]);
 void removePiece(Piece *playerPtr, Square board[8][8]);
 void convertPawn(Piece *player, Square board[8][8], int pieceOwner);
 int getGameMenuChoice(void);
-int endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]);
+void endGame(int victor, int gameStatus, Piece humanPieces[16], Piece computerPieces[16], Square board[8][8]);
 void killKing(Piece winner[16], Piece loser[16], Square board[8][8]);
 void sleep(clock_t wait);
 //INTERPRETATION
